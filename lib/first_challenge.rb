@@ -15,6 +15,15 @@ def first_challenge
 
   #your code here
 
+  contacts.each do |person, data|
+    data.each do |att, things|
+        if things.class? == Array && things[0] == 'strawberry'
+        things.delete_if do |thing|
+          thing == "strawberry"
+        end
+      end
+    end
+  end
 
   #remember to return your newly altered contacts hash!
   contacts
