@@ -17,7 +17,7 @@ def first_challenge
 
   contacts.each do |person, data|
     data.each do |att, things|
-        if things.class? == Array && things[0] == 'strawberry'
+        if things.class == Array && things[0] == 'strawberry'
         things.delete_if do |thing|
           thing == "strawberry"
         end
